@@ -72,7 +72,7 @@ static NSString * const cellId = @"cell";
 // MARK: - UICollectionViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     // 计算最后的索引
-    NSInteger index = self.bgCollectionView.contentOffset.x / self.wz_width;
+    NSInteger index = self.bgCollectionView.contentOffset.x / self.frame.size.width;
     // 通知代理让TitleView滑动到对应的位置
     if ([self.delegate respondsToSelector:@selector(contentView:scrollIndex:)]) {
         [self.delegate contentView:self scrollIndex:index];
@@ -83,7 +83,7 @@ static NSString * const cellId = @"cell";
 - (UICollectionView *)bgCollectionView{
     if (!_bgCollectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.itemSize = CGSizeMake(self.wz_width, self.wz_height);
+        flowLayout.itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
