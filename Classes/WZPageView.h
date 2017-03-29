@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class WZPageView;
-@class WZPageStyle;
+#import "UIView+WZFrame.h"
+#import "WZTitleView.h"
+#import "WZContentView.h"
+#import "WZPageStyle.h"
 
 @protocol WZPageViewDelegate<NSObject>
 
