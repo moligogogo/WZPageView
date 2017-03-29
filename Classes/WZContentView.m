@@ -34,6 +34,7 @@ static NSString * const cellId = @"cell";
 
 - (void)scrollToItemAtIndx:(NSInteger)index animated:(BOOL)animated{
     
+    // FIX
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     [self.bgCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     
