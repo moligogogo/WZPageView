@@ -7,7 +7,7 @@ s.license      = 'MIT'
 s.authors      = {'Trance' => '490359823@qq.com'}
 s.platform     = :ios, '6.0'
 s.source       = {:git => 'https://github.com/LittelWen/WZPageView.git', :tag => s.version}
-s.source_files = 'MJRefresh/**/*.{h,m}'
+s.source_files = 'Classes/**/*.{h,m}'
 
 s.requires_arc = true
 end
