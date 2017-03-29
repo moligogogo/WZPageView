@@ -1,14 +1,14 @@
 //
 //  ViewController.m
-//  Demo
+//  WZPageViewExample
 //
 //  Created by Trance on 2017/3/30.
 //  Copyright © 2017年 Trance. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "WZPageView.h"
 #import "WZPageStyle.h"
+#import "WZPageView.h"
 #import "UIView+WZFrame.h"
 @interface ViewController ()<WZPageViewDelegate>
 
@@ -26,6 +26,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 // MARK: 设置UI
 - (void)setupUI{
@@ -64,6 +65,4 @@
 - (void)pageView:(WZPageView *)pageView scrollIndex:(NSInteger)index{
     NSLog(@"^^^%zd",index);
 }
-
-
 @end

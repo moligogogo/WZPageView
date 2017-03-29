@@ -1,6 +1,6 @@
 //
-//  DemoUITests.m
-//  DemoUITests
+//  WZPageViewExampleUITests.m
+//  WZPageViewExampleUITests
 //
 //  Created by Trance on 2017/3/30.
 //  Copyright © 2017年 Trance. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface DemoUITests : XCTestCase
+@interface WZPageViewExampleUITests : XCTestCase
 
 @end
 
-@implementation DemoUITests
+@implementation WZPageViewExampleUITests
 
 - (void)setUp {
     [super setUp];
