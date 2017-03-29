@@ -1,12 +1,13 @@
 //
 //  WZContentView.m
-//  WPageView
+//  WZPageView
 //
 //  Created by Trance on 2017/3/20.
 //  Copyright © 2017年 Trance. All rights reserved.
 //
 
 #import "WZContentView.h"
+#import "UIView+WZFrame.h"
 #import "WZTitleView.h"
 static NSString * const cellId = @"cell";
 @interface WZContentView ()<UICollectionViewDataSource,UICollectionViewDelegate>

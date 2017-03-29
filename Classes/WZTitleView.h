@@ -1,5 +1,5 @@
 //
-//  WZTitlesView.h
+//  WZTitleView.h
 //  WZPageView
 //
 //  Created by Trance on 2017/3/20.

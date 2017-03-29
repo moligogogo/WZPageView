@@ -1,12 +1,12 @@
 //
 //  WZPageStyle.h
-//  WPageView
+//  WZPageView
 //
 //  Created by Trance on 2017/3/20.
 //  Copyright © 2017年 Trance. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface WZPageStyle : NSObject
 

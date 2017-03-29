@@ -7,6 +7,7 @@
 //
 
 #import "WZPageView.h"
+#import "UIView+WZFrame.h"
 #import "WZPageStyle.h"
 #import "WZTitleView.h"
 #import "WZContentView.h"

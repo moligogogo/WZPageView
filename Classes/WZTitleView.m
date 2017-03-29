@@ -1,5 +1,5 @@
 //
-//  WZTitlesView.m
+//  WZTitleView.m
 //  WZPageView
 //
 //  Created by Trance on 2017/3/20.
@@ -7,6 +7,7 @@
 //
 
 #import "WZTitleView.h"
+#import "UIView+WZFrame.h"
 #import "WZPageStyle.h"
 @interface WZTitleView ()
 
