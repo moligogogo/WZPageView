@@ -15,16 +15,16 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "WZPageView.podspec"
+  s.name         = "WZPageView"
   s.version      = "0.0.1"
-  s.summary      = "A short description of WZPageView.podspec."
+  s.summary      = "轻量级pageView"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "轻量级pageView"
+  s.description  = '轻量级pageView...'
 
   s.homepage     = "https://github.com/LittelWen/WZPageView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #
 
   s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Trance" => "490359823@qq.com" }
-  # Or just: s.author    = "Trancephp"
+  # Or just: s.author    = "Trance"
   # s.authors            = { "Trancephp" => "" }
   # s.social_media_url   = "http://twitter.com/Trancephp"
 
@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
