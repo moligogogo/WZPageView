@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F45F3001E8D4A8800EC4479 /* WZPageContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F45F2FF1E8D4A8800EC4479 /* WZPageContainerView.m */; };
 		9F8816701E8C198E006C5C26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F88166F1E8C198E006C5C26 /* main.m */; };
 		9F8816731E8C198E006C5C26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816721E8C198E006C5C26 /* AppDelegate.m */; };
 		9F8816761E8C198E006C5C26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816751E8C198E006C5C26 /* ViewController.m */; };
@@ -18,7 +19,6 @@
 		9F8816AC1E8C19A7006C5C26 /* UIView+WZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816A31E8C19A7006C5C26 /* UIView+WZFrame.m */; };
 		9F8816AD1E8C19A7006C5C26 /* WZContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816A51E8C19A7006C5C26 /* WZContentView.m */; };
 		9F8816AE1E8C19A7006C5C26 /* WZPageStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816A71E8C19A7006C5C26 /* WZPageStyle.m */; };
-		9F8816AF1E8C19A7006C5C26 /* WZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816A91E8C19A7006C5C26 /* WZPageView.m */; };
 		9F8816B01E8C19A7006C5C26 /* WZTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8816AB1E8C19A7006C5C26 /* WZTitleView.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F45F2FE1E8D4A8800EC4479 /* WZPageContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZPageContainerView.h; sourceTree = "<group>"; };
+		9F45F2FF1E8D4A8800EC4479 /* WZPageContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZPageContainerView.m; sourceTree = "<group>"; };
+		9F45F3031E8D4D5A00EC4479 /* WZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZPageView.h; sourceTree = "<group>"; };
 		9F88166B1E8C198E006C5C26 /* WZPageViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZPageViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F88166F1E8C198E006C5C26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F8816711E8C198E006C5C26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,8 +65,6 @@
 		9F8816A51E8C19A7006C5C26 /* WZContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZContentView.m; sourceTree = "<group>"; };
 		9F8816A61E8C19A7006C5C26 /* WZPageStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZPageStyle.h; sourceTree = "<group>"; };
 		9F8816A71E8C19A7006C5C26 /* WZPageStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZPageStyle.m; sourceTree = "<group>"; };
-		9F8816A81E8C19A7006C5C26 /* WZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZPageView.h; sourceTree = "<group>"; };
-		9F8816A91E8C19A7006C5C26 /* WZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZPageView.m; sourceTree = "<group>"; };
 		9F8816AA1E8C19A7006C5C26 /* WZTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTitleView.h; sourceTree = "<group>"; };
 		9F8816AB1E8C19A7006C5C26 /* WZTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,16 +160,17 @@
 		9F8816A11E8C19A7006C5C26 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9F8816A21E8C19A7006C5C26 /* UIView+WZFrame.h */,
-				9F8816A31E8C19A7006C5C26 /* UIView+WZFrame.m */,
-				9F8816A41E8C19A7006C5C26 /* WZContentView.h */,
-				9F8816A51E8C19A7006C5C26 /* WZContentView.m */,
+				9F45F3031E8D4D5A00EC4479 /* WZPageView.h */,
+				9F45F2FE1E8D4A8800EC4479 /* WZPageContainerView.h */,
+				9F45F2FF1E8D4A8800EC4479 /* WZPageContainerView.m */,
 				9F8816A61E8C19A7006C5C26 /* WZPageStyle.h */,
 				9F8816A71E8C19A7006C5C26 /* WZPageStyle.m */,
-				9F8816A81E8C19A7006C5C26 /* WZPageView.h */,
-				9F8816A91E8C19A7006C5C26 /* WZPageView.m */,
 				9F8816AA1E8C19A7006C5C26 /* WZTitleView.h */,
 				9F8816AB1E8C19A7006C5C26 /* WZTitleView.m */,
+				9F8816A41E8C19A7006C5C26 /* WZContentView.h */,
+				9F8816A51E8C19A7006C5C26 /* WZContentView.m */,
+				9F8816A21E8C19A7006C5C26 /* UIView+WZFrame.h */,
+				9F8816A31E8C19A7006C5C26 /* UIView+WZFrame.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -309,9 +311,9 @@
 				9F8816761E8C198E006C5C26 /* ViewController.m in Sources */,
 				9F8816AE1E8C19A7006C5C26 /* WZPageStyle.m in Sources */,
 				9F8816731E8C198E006C5C26 /* AppDelegate.m in Sources */,
+				9F45F3001E8D4A8800EC4479 /* WZPageContainerView.m in Sources */,
 				9F8816701E8C198E006C5C26 /* main.m in Sources */,
 				9F8816AD1E8C19A7006C5C26 /* WZContentView.m in Sources */,
-				9F8816AF1E8C19A7006C5C26 /* WZPageView.m in Sources */,
 				9F8816B01E8C19A7006C5C26 /* WZTitleView.m in Sources */,
 				9F8816AC1E8C19A7006C5C26 /* UIView+WZFrame.m in Sources */,
 			);
@@ -545,6 +547,7 @@
 				9F88169A1E8C198E006C5C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F88169B1E8C198E006C5C26 /* Build configuration list for PBXNativeTarget "WZPageViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +556,7 @@
 				9F88169D1E8C198E006C5C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F88169E1E8C198E006C5C26 /* Build configuration list for PBXNativeTarget "WZPageViewExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +565,7 @@
 				9F8816A01E8C198E006C5C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

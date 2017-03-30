@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name         = 'WZPageView'
 s.version      = '0.0.1'
-s.summary      = '轻量级PageView'
+s.summary      = '轻量级PageView...'
 s.homepage     = 'https://github.com/LittelWen/WZPageView'
 s.license      = 'MIT'
 s.authors      = {'Trance' => '490359823@qq.com'}

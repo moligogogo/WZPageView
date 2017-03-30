@@ -1,17 +1,17 @@
 //
-//  WZPageView.m
-//  WZPageView
+//  WZPageContainerView.m
+//  WZPageViewExample
 //
-//  Created by Trance on 2017/3/20.
+//  Created by Trance on 2017/3/30.
 //  Copyright © 2017年 Trance. All rights reserved.
 //
 
-#import "WZPageView.h"
+#import "WZPageContainerView.h"
 #import "UIView+WZFrame.h"
 #import "WZPageStyle.h"
 #import "WZTitleView.h"
 #import "WZContentView.h"
-@interface WZPageView ()<WZTitleViewDelegate,WZContentViewDelegate>
+@interface WZPageContainerView ()<WZTitleViewDelegate,WZContentViewDelegate>
 
 /**titles*/
 @property (nonatomic, strong) NSArray *titles;
@@ -23,12 +23,9 @@
 @property (nonatomic, weak) WZTitleView *titleView;
 /**contentView*/
 @property (nonatomic, weak) WZContentView *contentView;
-
-
 @end
 
-@implementation WZPageView
-
+@implementation WZPageContainerView
 
 - (instancetype)initWithFrame:(CGRect)frame currentVc:(UIViewController *)currentVc childVcs:(NSArray *)childVcs titles:(NSArray *)titles style:(WZPageStyle *)style{
     
@@ -47,20 +44,22 @@
     return self;
 }
 
-- (void)pageViewMove:(NSInteger)index animated:(BOOL)animated{
+- (void)containerViewMoveTo:(NSInteger)page animated:(BOOL)animated{
     
-    [self.titleView titleViewScrollToIndex:index];
-    [self.contentView scrollToItemAtIndx:index animated:animated];
+    [self.titleView titleViewScrollToIndex:page];
+    [self.contentView scrollToItemAtIndx:page animated:animated];
 }
+
 
 // MARK: WZTitleViewDelegate
 - (void)titleView:(WZTitleView *)titleView selectIndex:(NSInteger)index{
     
     [self.contentView scrollToItemAtIndx:index animated:YES];
     
-    if ([self.delegate respondsToSelector:@selector(pageView:scrollIndex:)]) {
-        [self.delegate pageView:self scrollIndex:index];
+    if ([self.delegate respondsToSelector:@selector(containerView:didScrollIndex:)]) {
+        [self.delegate containerView:self didScrollIndex:index];
     }
+   
 }
 
 // MARK: WZContentViewDelegate
@@ -68,15 +67,15 @@
     
     [self.titleView titleViewScrollToIndex:index];
     
-    if ([self.delegate respondsToSelector:@selector(pageView:scrollIndex:)]) {
-        [self.delegate pageView:self scrollIndex:index];
+    if ([self.delegate respondsToSelector:@selector(containerView:didScrollIndex:)]) {
+        [self.delegate containerView:self didScrollIndex:index];
     }
 }
 
 // MARK: -
 // MARK: 设置UI
 - (void)setupUI{
-
+    
     self.backgroundColor = [UIColor whiteColor];
     
     [self setupTitleView];
@@ -106,7 +105,6 @@
     self.contentView.delegate = self;
     
 }
-
 
 
 @end

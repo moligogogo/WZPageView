@@ -7,10 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "WZPageStyle.h"
 #import "WZPageView.h"
-#import "UIView+WZFrame.h"
-@interface ViewController ()<WZPageViewDelegate>
+@interface ViewController ()<WZPageContainerViewDelegate>
 
 @end
 
@@ -18,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setupUI];
 }
 
 
@@ -55,14 +54,16 @@
     // style
     WZPageStyle *style = [[WZPageStyle alloc] init];
     CGRect frame = CGRectMake(0, 64, self.view.wz_width, self.view.wz_height);
-    WZPageView *pageView = [[WZPageView alloc] initWithFrame:frame currentVc:self childVcs:childVC titles:titles style:style];
-    pageView.delegate = self;
+    WZPageContainerView *pageContaioner = [[WZPageContainerView alloc] initWithFrame:frame currentVc:self childVcs:childVC titles:titles style:style];
+    pageContaioner.delegate = self;
     
-    [self.view addSubview:pageView];
+    [self.view addSubview:pageContaioner];
     
 }
 
-- (void)pageView:(WZPageView *)pageView scrollIndex:(NSInteger)index{
-    NSLog(@"^^^%zd",index);
+- (void)containerView:(WZPageContainerView *)containerView didScrollIndex:(NSInteger)index{
+    NSLog(@"%zd",index);
 }
+
+
 @end

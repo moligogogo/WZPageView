@@ -1,46 +1,18 @@
 //
-//  WZZPageView.h
-//  WZPageView
+//  WZPageView.h
+//  WZPageViewExample
 //
-//  Created by Trance on 2017/3/20.
+//  Created by Trance on 2017/3/30.
 //  Copyright © 2017年 Trance. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class WZPageView;
-@class WZPageStyle;
-@protocol WZPageViewDelegate<NSObject>
+#ifndef WZPageView_h
+#define WZPageView_h
 
+#import "UIView+WZFrame.h"
+#import "WZPageContainerView.h"
+#import "WZPageStyle.h"
+#import "WZTitleView.h"
+#import "WZContentView.h"
 
-/**
- current scroll index
-
- @param pageView pageView
- @param index index
- */
-- (void)pageView:(WZPageView *)pageView scrollIndex:(NSInteger)index;
-
-@end
-
-@interface WZPageView : UIView
-
-/**delegate*/
-@property (nonatomic, weak) id <WZPageViewDelegate> delegate;
-
-
-/**
- init
-
- @param frame frame
- @param currentVc currentVc
- @param childVcs childVcs
- @param titles titles
- @param style style
- @return self
- */
-- (instancetype)initWithFrame:(CGRect)frame  currentVc:(UIViewController *)currentVc childVcs:(NSArray *)childVcs titles:(NSArray *)titles style:(WZPageStyle *)style;
-
-
-- (void)pageViewMove:(NSInteger)index animated:(BOOL)animated;
-
-@end
+#endif /* WZPageView_h */
