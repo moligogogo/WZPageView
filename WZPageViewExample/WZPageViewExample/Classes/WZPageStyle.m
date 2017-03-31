@@ -10,9 +10,16 @@
 
 @implementation WZPageStyle
 
+- (UIColor *)titleViewBackgroundColor{
+    if (!_titleViewBackgroundColor) {
+        _titleViewBackgroundColor = [UIColor whiteColor];
+    }
+    return _titleViewBackgroundColor;
+}
+
 - (CGFloat)titleViewH{
     if (_titleViewH == 0) {
-        _titleViewH = 44;
+        _titleViewH = 35;
     }
     return _titleViewH;
 }
@@ -33,7 +40,7 @@
 
 - (UIColor *)itemHighColor{
     if (_itemHighColor == nil) {
-        _itemHighColor = [UIColor orangeColor];
+        _itemHighColor = [UIColor redColor];
     }
     return _itemHighColor;
 }

@@ -48,6 +48,10 @@
     
     [self.titleView titleViewScrollToIndex:page];
     [self.contentView scrollToItemAtIndx:page animated:animated];
+    
+    if ([self.delegate respondsToSelector:@selector(containerView:didScrollIndex:)]) {
+        [self.delegate containerView:self didScrollIndex:page];
+    }
 }
 
 
@@ -87,9 +91,8 @@
 -(void)setupTitleView{
     
     WZTitleView *titleView = [[WZTitleView alloc] initWithFrame:CGRectMake(0, 0, self.wz_width, _style.titleViewH) titles:_titles style:_style];
-    
+    titleView.backgroundColor = _style.titleViewBackgroundColor;
     [self addSubview:titleView];
-    titleView.backgroundColor = [UIColor yellowColor];
     self.titleView = titleView;
     self.titleView.delegate = self;
     

@@ -10,6 +10,8 @@
 
 @interface WZPageStyle : NSObject
 
+/**titleViewColor*/
+@property (nonatomic, strong) UIColor *titleViewBackgroundColor;
 /**标题容器高度*/
 @property (nonatomic, assign) CGFloat titleViewH;
 /**选中颜色*/

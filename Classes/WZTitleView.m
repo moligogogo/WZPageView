@@ -87,8 +87,6 @@
     // 记录当前的索引
     self.currentIndex = highLabel.tag;
     
-   
-    
     // 判断是否能滚动
     if ([self scrollviewIsScoll]) {
         
@@ -103,7 +101,7 @@
         [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
         
         [UIView animateWithDuration:0.25 animations:^{
-            self.markView.wz_width = highLabel.wz_width;
+            self.markView.wz_width = highLabel.wz_width + 10;
             self.markView.wz_centetX = highLabel.wz_centetX;
             
         }];
@@ -165,7 +163,6 @@
     CGFloat w = 0;
     CGFloat h = self.wz_height;
     
-    
     if ([self scrollviewIsScoll]) {
         for (NSInteger i = 0; i < _titles.count; i++) {
             
@@ -176,7 +173,7 @@
                 
                 x = _style.itemMargin * 0.5;
                 titleLabel.frame = CGRectMake(x, y, w, h);
-                self.markView.wz_width = titleLabel.wz_width;
+                self.markView.wz_width = titleLabel.wz_width + 10;
                 self.markView.wz_centetX = titleLabel.wz_centetX;
             }else{
                 
@@ -217,7 +214,6 @@
     for (NSInteger i = 0; i < _titles.count; i++) {
         
         UILabel *titleLabel = self.titleLabels[i];
-        NSLog(@"%f", [_titles[i] boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:titleLabel.font} context:nil].size.width);
         totalLabelW += [_titles[i] boundingRectWithSize:CGSizeMake(MAXFLOAT, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:titleLabel.font} context:nil].size.width;
     }
     
